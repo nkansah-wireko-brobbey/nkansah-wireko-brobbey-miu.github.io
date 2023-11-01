@@ -120,3 +120,61 @@ div.image-content >img{
     font-weight: bold;
     margin-top: -10px;
 }
+.mid-2{
+    display: flex;
+    padding: 90px 150px;
+    gap: 70px;
+    background-color: #eff2f1;
+}
+
+.img-container > img{
+    max-width: 80%;
+    border-radius: 50px;
+    height: auto;
+}
+.service-info-container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.mid-3{
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    padding: 90px 150px;
+    gap: 0px;
+}
+.mid-3-left{
+    display: flex;
+    gap: 20px;
+}
+.mid-3-left-left > img{
+ 
+}
+.img-60{
+    max-width: 60%;
+object-fit: cover;
+}
+.img-100{
+    max-width: 100%;
+}
+.img-up{
+    width: 80%;
+    z-index: 1;
+    margin-left: -90px;
+    margin-top: 20px;
+}
+.rounded{
+    border-radius: 20px;
+}
+.line-height-24{
+    line-height: 24px;
+}
+ul.grid-cols-2{
+    margin: 40px 20px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: circle;
+    gap: 40px;
+}
