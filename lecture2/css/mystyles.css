@@ -3,7 +3,7 @@
     padding: 30px;
     background-color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.8fr;
     gap: 10px;
     font-size: 12px;
 }
@@ -13,7 +13,7 @@
     margin-bottom: 20px;
 }
 p{
-    font-size: 10px;
+    font-size: 15px;
     color: grey;
 }
 .sm-img{
@@ -28,11 +28,12 @@ p{
 }
 .rounded-input{
     border-radius: 50px;
-    background-color: #0b0124;
+    background-color: darkslategrey;
     border: none;
     color: white;
     padding: 10px;
     font-size: 10px;
+    width: 450px;
 }
 .rounded-btn{
     border-radius: 50px;
@@ -60,14 +61,14 @@ hr{
     
 }
 span{
-    font-size: 9px;
+    font-size: 15px;
     color: gray;
     font-style: italic;
 
 }
 .grid-container2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 5px;
     align-content: start;
     align-items: start;
@@ -75,7 +76,7 @@ span{
 
 .img-grid{
     object-fit: cover;
-    max-width: 100%;
+    max-width: 50%;
 }
 .footer{
     color: white;
@@ -88,4 +89,7 @@ span{
     display: flex;
     list-style: none;
     gap: 10px;
+}
+.mg-tp-30{
+    margin-top: 30px;
 }
