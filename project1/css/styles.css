@@ -399,3 +399,6 @@ li *{
     background-color: rgba(59, 93, 80, 0.2);
     
 }
+a:hover{
+    cursor: pointer;
+}
