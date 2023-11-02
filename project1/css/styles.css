@@ -138,9 +138,25 @@ a{
 
 
 
-.menu > li.active{
+.menu  li.active{
     opacity: 1 !important;
     font-weight: bolder;
+    /* border-bottom: 2px solid #f9bf29; */
+}
+div.underline{
+    position: relative;
+}
+div.underline::before{
+ 
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    width: 40px;
+    height: 4px;
+   
+    background-color: #f9bf29;
+    z-index: 99;
 }
 .banner{
     display: flex;
@@ -151,9 +167,7 @@ a{
     font-size: 54px;
     /* line-height: 1.2; */
 }
-div{
-    /* border: 1px solid; */
-}
+
 /* .banner-left{
     width: 50%;
 } */
@@ -290,6 +304,7 @@ ul.grid-cols-2{
 .mid-4 img{
     max-width: 30%;
     object-fit: contain;
+    z-index: 2;
 }
 .mid-4-sub{
     display: flex;
@@ -308,7 +323,7 @@ ul.grid-cols-2{
 }
 .testimonials{
   
-    padding: 90px 150px;
+    padding: 90px 150px 0px 150px;
 
 }
 .testimonials > .content{
@@ -317,7 +332,7 @@ ul.grid-cols-2{
 
     padding: 0px 150px;
     gap: 0px;
-    height: 500px;
+    height: 400px;
     align-items: center;
     text-align: center;
 }
@@ -356,4 +371,34 @@ li *{
     max-width: 85%;
     object-fit: cover;
     border-radius: 20px;
+}
+.service-info > div.icon{
+    position: relative;
+    /* border: 1px solid red; */
+    
+}
+.icon::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 20;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: rgba(59, 93, 80, 0.2);
+    
+}
+.backdrop{
+    position: relative;
+}
+.backdrop::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: rgba(59, 93, 80, 0.2);
+    
 }
