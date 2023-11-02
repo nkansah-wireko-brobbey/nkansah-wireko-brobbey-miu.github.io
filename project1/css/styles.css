@@ -76,6 +76,13 @@ margin: 0px;
     
     
 }
+.footer ion-icon{
+    margin: 0px 10px 0px 0px;
+    /* font-size: 15px; */
+}
+.footer > h4{
+    font-size: 20px;
+}
 
 .furni{
     /* display:flex;
