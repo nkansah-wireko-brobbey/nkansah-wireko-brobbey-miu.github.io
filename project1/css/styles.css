@@ -36,3 +36,92 @@ margin: 0px;
     gap: 10px;
     list-style: none;
 }
+
+.footer{
+    display:flex;
+    justify-content: space-between;
+    margin: 120px;
+    margin-bottom: -100px;
+}
+
+.nested_footer{
+    display: flex;
+    gap: 8px;
+
+}
+
+.btn{
+    width:60px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(47, 83, 47) 
+}
+
+
+.sofa{
+    width:400px;
+}
+.overlap{
+    margin-top: -180px;
+}
+
+.footer2{
+    display: flex;
+    justify-content: space-between;
+    margin: 120px;
+    
+
+    
+    
+}
+
+.furni{
+    /* display:flex;
+    justify-content: space-between;
+    gap:20%;
+    margin: 50px; */
+}
+
+.footer2_a{
+    /* display: flex; */
+    gap:8px;
+
+}
+
+.footer2_b{
+    /* display: block; */
+    gap:8px;   
+}
+
+.footer2_c{
+    /* display: flex; */
+    gap:8px;
+}
+
+.footer2_d{
+    /* display: flex; */
+    gap:8px;
+}
+.footer2_e{
+    /* display: block; */
+    gap:8px;
+}
+a{
+    text-decoration:none;
+    color:grey;
+}
+
+.bottom-container{
+    display:flex;
+    gap:5px;
+    margin:120px;  
+}
+
+.gly{
+    width:50px;
+    height: 50px; 
+    border-radius: 50px;
+}
+
+
+
