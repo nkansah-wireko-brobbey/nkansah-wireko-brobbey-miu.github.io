@@ -167,6 +167,9 @@ object-fit: cover;
 .rounded{
     border-radius: 20px;
 }
+.circled{
+    border-radius: 50%;
+}
 .line-height-24{
     line-height: 24px;
 }
@@ -177,4 +180,55 @@ ul.grid-cols-2{
     grid-template-columns: 1fr 1fr;
     list-style: circle;
     gap: 40px;
+}
+.mid-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 90px 150px;
+    gap: 20px;
+}
+.mid-4 img{
+    max-width: 30%;
+    object-fit: contain;
+}
+.mid-4-sub{
+    display: flex;
+    gap: 20px;
+}
+.mid-4-sub .image, .mid-4-sub .info{
+    /* flex: auto; */
+}
+
+.mid-4-sub a{
+    text-decoration: none;
+    color: black;
+}
+.centred{
+    text-align: center;
+}
+.testimonials{
+  
+    padding: 90px 150px;
+
+}
+.testimonials > .content{
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px 150px;
+    gap: 0px;
+    height: 500px;
+    align-items: center;
+    text-align: center;
+}
+.testimonials > .content p{
+    font-size: 18px;
+    line-height: 32px;
+    padding: 0px 120px;
+}
+.testimonials > .content img{
+    max-width: 10%;
+}
+.testimonials > .content label{
+    margin-top: -20px;
 }
