@@ -38,6 +38,7 @@ margin: 0px;
     gap: 10px;
     list-style: none;
 }
+/*Billy's css starts here*/
 
 .footer{
     display:flex;
@@ -70,10 +71,7 @@ margin: 0px;
 .footer2{
     display: flex;
     justify-content: space-between;
-    margin: 120px;
-    
-
-    
+    margin: 120px;   
     
 }
 .footer ion-icon{
@@ -136,7 +134,20 @@ a{
     border:none;
 }
 
+.last_Part{
+    display: flex;
+    justify-content: space-between;
+    margin:120px;
+    margin-top:-100px
+}
 
+.closing{
+    background-color: #eff2f1;
+    height:60px;
+    margin-top: -50px;
+}
+
+/*bil ends here*/
 
 .menu  li.active{
     opacity: 1 !important;
