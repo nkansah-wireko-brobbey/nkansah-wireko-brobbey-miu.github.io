@@ -84,12 +84,7 @@ margin: 0px;
     font-size: 20px;
 }
 
-.furni{
-    /* display:flex;
-    justify-content: space-between;
-    gap:20%;
-    margin: 50px; */
-}
+
 
 .footer2_a{
     /* display: flex; */
@@ -218,12 +213,7 @@ div.mid-1{
     padding: 90px 150px;
    
 }
-.mid-1 > div{
-    /* border: 1px solid ; */
-}
-div.info-content{
-    /* width: 300px; */
-}
+
 div.image-content >img{
     max-width: 90%;
     object-fit: cover;
@@ -273,9 +263,7 @@ div.image-content >img{
     display: flex;
     gap: 20px;
 }
-.mid-3-left-left > img{
- 
-}
+
 .img-60{
     max-width: 60%;
 object-fit: cover;
@@ -321,9 +309,7 @@ ul.grid-cols-2{
     display: flex;
     gap: 20px;
 }
-.mid-4-sub .image, .mid-4-sub .info{
-    /* flex: auto; */
-}
+
 
 .mid-4-sub a{
     text-decoration: none;
