@@ -232,3 +232,7 @@ ul.grid-cols-2{
 .testimonials > .content label{
     margin-top: -20px;
 }
+li *{
+    font-size: 20px;
+    margin: 0px 10px;
+}
