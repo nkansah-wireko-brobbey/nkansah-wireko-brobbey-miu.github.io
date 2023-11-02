@@ -336,4 +336,24 @@ li *{
     font-size: 20px;
     margin: 0px 10px;
 }
+.blog{
+    background-color: #eff2f1;
 
+    padding: 90px 150px;  
+}
+.blog-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.blog-content{
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    justify-content: space-between;
+    gap: 20px;
+}
+.blog-section img{
+    max-width: 85%;
+    object-fit: cover;
+    border-radius: 20px;
+}
