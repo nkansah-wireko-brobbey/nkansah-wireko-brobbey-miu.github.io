@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            margin: 0;
+        }
+        li{
+        display: inline-block;
+    }
+    h4{
+        margin: 0;
+    }
+    .content{
+        width: 100%;
+        background-color: grey;
+        border: 1px solid black;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+    }
+    .left{
+        width: 70%;
+        background-color: white;
+    }
+    .right{
+       
+        background-color: white;
+
+    }
+    img{
+        float: left;
+        /* height: 100%; */
+        object-fit: cover;
+    }
+    .main-content{
+        display: flex;
+        gap: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div class="nav">
+            <div class="logo-text">
+                <h4>Bidhan Tech Blog</h4>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>Home</li>
+                    <li>Recent Posts</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <span>An Example Technology Blog</span>
+        </div>
+        <div class="content">
+            <div class="left">
+                <div><span>
+                    An Example post
+                </span></div>
+                <div><span>
+                    An Example post
+                </span></div>
+                <div class="main-content">
+                    <div class="img">
+
+                        <img src="../assets/chrysanthumum.jpeg" alt="">
+                    </div>
+                    <div class="info">
+
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, debitis animi soluta et tempora molestias tempore sint qui dolorum minus voluptatibus suscipit harum eveniet? Molestiae aspernatur modi architecto blanditiis magni?</span><br>
+                        <button>
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <span>Search</span>
+
+                </div>
+                <hr>
+                <div>
+                    <span>Search For</span>
+                    <span>Search</span>
+                    <span>Search </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
