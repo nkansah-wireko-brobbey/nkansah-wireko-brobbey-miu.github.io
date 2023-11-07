@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .light{
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
+
+    <script>
+        function changetheme(){
+            let selected = $('#theme').val()
+            console.log(selected)
+            
+            $('.text').removeClass('dark')
+            $('.text').removeClass('light')
+
+            if(selected == 'Dark'){
+                $('.text').addClass('dark')
+            }else if(selected = 'Light'){
+                $('.text').addClass('light')
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div>
+        <select name="theme" id="theme">
+            <option value="Dark">Dark</option>
+            <option value="Light">Light</option>
+        </select>
+    </div>
+
+    <p class="text">
+        Bananas are yellow in color
+    </p>
+    <button onclick="changetheme()">Submit</button>
+    
+</body>
+</html>

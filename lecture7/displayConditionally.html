@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+p.text-toggle{
+   display: none;
+}
+</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+function toggleP(){
+    let p = $('p.text-toggle');
+
+    if(p.is(':hidden')){
+        p.show()
+    }else{
+        p.hide()
+    }
+}
+function toggleInput(){
+    $('.input-toggle').toggle();
+   
+}
+
+</script>
+</head>
+<body>
+    <div>
+        Dispalay
+    </div>
+    <p class="text-toggle">Bananas are yellow in color</p>
+    <button id="first" onclick="toggleP()">Submit</button>
+
+    <div>
+        Visibility
+    </div>
+    <div>
+        <input type="text" value="" class="input-toggle"> 
+        <button id="second
+        " onclick="toggleInput()">Submit</button>
+    </div>
+</body>
+</html>

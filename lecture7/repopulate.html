@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
+
+    <script>
+        $(document).ready(()=>{
+            let label = $('<label>Country</label>')
+            let select = $('<select>'+
+                '<option>Python</option>'+
+                '<option>Java</option>'+
+                '<option>Javascript</option>'+
+                '</select>')
+
+            let label2 =  $('<label>Gender</label>')
+            let radioDiv =  $('<div></div>')
+            let radioEL =  $('<input type="radio" value="Male" name="gender" /><label>Male</label>'+
+                            '<input type="radio" value="Female" name="gender" /><label>Female</label>'
+                        )
+            radioDiv.append(radioEL).prepend(label2)
+            $('body').append(label).append(select).append(radioDiv)
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
