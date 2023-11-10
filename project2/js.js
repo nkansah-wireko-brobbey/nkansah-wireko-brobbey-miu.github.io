@@ -47,8 +47,17 @@ $(()=>{
         character.addClass('animate')
         setTimeout(()=>{
         character.removeClass('animate')
-        },500)
-        console.log('ok')
+        },1000)
+        console.log('Mouse click')
+    })
+    $(document).keydown((e)=>{
+        if(e.which === 32 ||e.which === 38){
+            character.addClass('animate')
+        setTimeout(()=>{
+        character.removeClass('animate')
+        },1000)
+        console.log('Keydown')
+        }
     })
 
     let stateCheck = setInterval(()=>{
