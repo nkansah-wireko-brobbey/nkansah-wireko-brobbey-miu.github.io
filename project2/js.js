@@ -128,9 +128,15 @@ $(()=>{
 
             blockEl.css('display','none')
             characterEl.css('display','none')
+
+            clearInterval(stateCheck)
+            // break;
         }
 
-        $('#time1').html("Time: "+Math.floor(score))
+        if(Math.floor(score) < 50){
+
+            $('#time1').html("Time: "+Math.floor(score))
+        }
 
     },10)
 
