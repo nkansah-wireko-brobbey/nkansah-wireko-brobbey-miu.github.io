@@ -103,9 +103,9 @@ $(()=>{
                     setTimeout(()=>{
                         $('#score').html('Your Score: '+Math.floor(score)+'</br> play again ?'+'</br> ').append($('<button id="btn1" onclick="reloadPage()">Play</button>'))
                     },2000)
-                    setTimeout(()=>{
-                        location.reload();
-                    },10000)
+                    // setTimeout(()=>{
+                    //     location.reload();
+                    // },50000)
                     clearInterval(stateCheck)
                 } else{
                     collisionaudio.play()
