@@ -167,7 +167,7 @@ font-size: 30px;
 @keyframes jump{
     0%{
         top: 150px;
-        left: 200px;
+        /* left: 200px; */
     }
     3%{
         top: 50px;
@@ -177,7 +177,7 @@ font-size: 30px;
     }
     100%{
         top: 150px;
-        left: 300px;
+        /* left: 300px; */
     }
 }
 #blockImg{
