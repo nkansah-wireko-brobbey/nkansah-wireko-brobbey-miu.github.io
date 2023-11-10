@@ -101,11 +101,11 @@ $(()=>{
                     blockEl.css('display','none')
                     characterEl.css('display','none')
                     setTimeout(()=>{
-                        $('#score').html('Your Score: '+Math.floor(score)+'</br> play again ?'+'</br> ').append($('<button id="btn1">Play</button>'))
+                        $('#score').html('Your Score: '+Math.floor(score)+'</br> play again ?'+'</br> ').append($('<button id="btn1" onclick="reloadPage()">Play</button>'))
                     },2000)
                     setTimeout(()=>{
                         location.reload();
-                    },50000)
+                    },10000)
                     clearInterval(stateCheck)
                 } else{
                     collisionaudio.play()
@@ -185,4 +185,8 @@ function getRandomNumber() {
     console.log(val)
     return val;
     // return  2
+}
+
+function reloadPage(){
+    location.reload();
 }
