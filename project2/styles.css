@@ -120,7 +120,7 @@ font-size: 30px;
 #character{
     width: 20px;
     height: 50px;
-    border: 2px solid;
+    /* border: 2px solid; */
     /* background-color: black; */
     position: relative;
     top: 150px;

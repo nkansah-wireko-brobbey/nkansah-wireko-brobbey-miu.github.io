@@ -45,8 +45,8 @@ $(()=>{
         })
         console.log('log')
     })
-    $('#btn1').click(()=>{
-        event.stopPropagation()
+    $('#btn1').click((e)=>{
+        // e.stopPropagation()
         location.reload();
 
     })
