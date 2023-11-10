@@ -47,7 +47,7 @@ $(()=>{
         character.addClass('animate')
         setTimeout(()=>{
         character.removeClass('animate')
-        },1000)
+        },500)
         console.log('Mouse click')
     })
     $(document).keydown((e)=>{
@@ -55,7 +55,7 @@ $(()=>{
             character.addClass('animate')
         setTimeout(()=>{
         character.removeClass('animate')
-        },1000)
+        },2000)
         console.log('Keydown')
         }
     })
@@ -80,6 +80,10 @@ $(()=>{
                     $('#score').html("Game Over")
                     $('#block').removeClass('blockMove')
                     // $('#block').removeClass('blockMove')
+                    let blockEl = $('#block')
+                    let characterEl = $('#character')
+                    blockEl.css('display','none')
+                    characterEl.css('display','none')
                     setTimeout(()=>{
                         $('#score').html('Your Score: '+Math.floor(score)+'</br> play again ?'+'</br> ').append($('<button id="btn1">Play</button>'))
                     },2000)
@@ -104,6 +108,30 @@ $(()=>{
             }
         // console.log(characterPosition+":"+blockPosition)
         score += 0.01
+
+        if(Math.floor(score) >= 20  && Math.floor(score) <= 30){
+            let blockEl = $('#block')
+            blockEl.attr('class','blockMove1')
+        }else if(Math.floor(score) >= 31  && Math.floor(score) <= 40){
+            let blockEl = $('#block')
+            blockEl.attr('class','blockMove2')
+        }else if(Math.floor(score) >= 41  && Math.floor(score) <= 50){
+            let blockEl = $('#block')
+            blockEl.attr('class','blockMove3')
+        }else if(Math.floor(score) >= 50){
+            let blockEl = $('#block')
+            let characterEl = $('#character')
+            // $('#time1').html("Time: "+Math.floor(score))
+            // set
+            $('#time1').html("You Win")
+            $('#score').html('Your Score: '+Math.floor(score)+'</br> play again ?'+'</br> ').append($('<button id="btn1">Play</button>'))
+
+            blockEl.css('display','none')
+            characterEl.css('display','none')
+        }
+
+        $('#time1').html("Time: "+Math.floor(score))
+
     },10)
 
 })

@@ -18,6 +18,18 @@ body{
     text-align: center;
     
 }
+#time1{
+    font-family: Bangers;
+    font-size: 2em;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0px auto;
+    text-align: center;
+    
+}
 #page{
     width: 100vw;
     height: 100vh;
@@ -133,6 +145,15 @@ font-size: 30px;
 }
 .blockMove{
     animation: block 10s infinite linear
+}
+.blockMove1{
+    animation: block 7s infinite linear
+}
+.blockMove2{
+    animation: block 5s infinite linear
+}
+.blockMove3{
+    animation: block 2s infinite linear
 }
 @keyframes block{
     0%{
