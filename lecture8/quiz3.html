@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #items{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            justify-content: center;
+            /* align-items:; */
+        }
+        #content{
+            display: flex;
+            gap:10px
+            
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        #text{
+            display: grid;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+           let list = [{ id: 2, fname: 'John', lname: 'Doe', img: '/images/chrysanthumum.jpeg' },
+        { id: 4, fname: 'Maharishi', lname: 'Mahesh', img: '/images/tulips.jpeg' },
+        { id: 3, fname: 'Arya', lname: 'Batt', img: '/images/longImage.jpeg' },
+        { id: 1, fname: 'Aakash', lname: 'Chatterji', img: '/images/jinnia.jpeg' }]
+
+        $(()=>{
+           let button= $('<div><button id="btn" onclick="sortMe()">Sort</button></div>')
+
+            
+            let content = $('<div id="content"><div>')
+
+            $('body').append(button).append(content)
+            build();
+
+//             $('.filter').click((e)=>{
+//                 // console.log((e.target.getAttribute("value")))
+//                 console.log(e.target.getAttribute("value"))
+//                 let compare = e.target.getAttribute("value")
+//               list =  list.filter((val)=>{
+//                     return val['id'] != compare
+//                 })
+// console.log(list)
+// build()
+//             })
+
+        })
+
+        const filterMe =(e)=>{
+            console.log(e)
+                let compare = $(e).attr('value')
+              list =  list.filter((val)=>{
+                    return val['id'] != compare
+                })
+console.log(list)
+build()
+        }
+
+        const sortMe=()=>{
+            list.sort((a,b)=>{
+                return a.lname.localeCompare(b.lname);
+            })
+            build()
+        }
+
+        const build = ()=>{
+            html = ''
+            for(let ele of list){
+                html += '<div id="items">'
+                    html += '<img src=".'+ele['img']+'"/>'
+                    html +='<div id="text">'
+                        html += '<div>'+ele['lname']+'</div>'
+                        html += '<div>'+ele['fname']+'</div>'
+                        html += '<div><button class="filter" value="'+ele['id']+'" onclick="filterMe(this)">Delete</button></div>'
+                        html+='</div>'
+                    html +='</div>'
+            }
+
+            $('div#content').html($(html))
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

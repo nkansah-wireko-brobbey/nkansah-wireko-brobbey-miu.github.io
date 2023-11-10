@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    // let obj = [{ humidity: 20, speed: 30 }, { humidity: 10, speed: 40 }]
+    let obj = [{ color: "red", flower:"rose",plant:'Shrub' }, { color: "red", flower:"jinnia",plant:'shrub' }];
+    $(()=>{
+        let options = ''
+        let first = obj[0];
+        for(let key in first){
+            options+='<option>'+key+'</option>'
+        }
+        $('#selectKey').append($(options))
+
+
+        $('#myBtn').on('click',()=>{
+
+            let html=''
+
+            let selectedElements = $('select[name="selectKey"] option:selected');
+            let values = []
+            console.log(selectedElements)
+            for (const iterator of selectedElements) {
+                values.push($(iterator).val())
+            }
+            console.log(values)
+
+            
+                for(let eachIndex of obj){
+                    
+                    for(let key in eachIndex){
+
+                        if(values.indexOf(key)>= 0){
+                            console.log(key)
+                            html +='<div>'
+                            html +='<label>'+ key+'</label><input value="'+eachIndex[key]+'">'
+                            html += '</div><br/>'
+                        }
+                    }
+                }
+
+          $('#display').html($(html));
+        })
+    })
+</script>
+</head>
+<body>
+    <div id="page">
+        <select name="selectKey" id="selectKey" multiple></select>
+        <button id="myBtn">Submit</button>
+        <div id="display"></div>
+    </div>
+</body>
+</html>

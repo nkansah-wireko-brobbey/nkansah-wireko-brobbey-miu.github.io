@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    let objectArray = [{Name:'Ram',Age:30,Skills:['java','javascript']},{Name:'Shyam',Age:20,Skills:['python','c']}];
+
+    $(()=>{
+        let contents = $('<div id="contents"></div>')
+        contents.append($('<label>Select Student </label><select id="names"></select> <button id="populate" onclick="populate()">Populate</button>')).append($('<div id="dPopulate"></div><div id="contingent"></div><button id="submit" onclick="submit()">submit</button>'))
+        $('body').append(contents)
+
+        ///build options
+        let options = ''
+        for(let ele of objectArray){
+            options += '<option value="'+ele.Name+'">'+ele.Name+'</option>'
+        }
+        $('select#names').html($(options))
+    })
+
+    const populate =()=>{
+        let html = ''
+        let dropValue = $('select#names').val();
+
+        let newArr = objectArray.filter((val)=>{
+            return val.Name == dropValue
+        })
+
+       
+           html +='<label>Age</label>'
+                    +'<input value="'+newArr[0].Age+'"><br>';
+                    html+='<label>Skills</label>'
+                    for (const iterator of newArr[0].Skills) {
+                            html+='<input type="checkbox" name="skill" value="'+iterator+'">'
+                            +'<label>'+iterator+'</label>'
+                    }
+        
+        $('#dPopulate').html($(html))
+    }
+    const submit =()=>{
+        let selected=[]
+        let arr=[];
+        selected = $('[type="checkbox"]:checked').map((idx,el)=>{
+            console.log($(el).val())
+            arr.push($(el).val())
+            return $(el).val().trim();
+        })
+        console.log(arr)
+        let html =''
+        if(arr.indexOf('java')>=0){
+            html += '<label>SubSkills: </label>'
+            +'<select>'
+                +'<option>Spring</option>'
+                +'<option>Hibernate</option>'
+            +'</select>'
+        }
+$('div#contingent').html(html)
+    }
+</script>
+<style>
+    [type="checkbox"]{
+        background-color: blue;
+        border: 1px solid;
+        margin: 20px;
+    }
+    body{
+        /* background-color: blue; */
+
+    }
+</style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    let fruits = ['apple','pear','grapes'];
+    // let backUp = fruits.splice()
+
+    const isUlPresent = ()=>{
+        return $('ul').length == 0?false:true
+    }
+
+    const build = ()=>{
+        // create ul
+    
+        let ul = $('<ul><ul>')
+            let li = ''
+
+            for(let val of fruits){
+                li += '<li>'+val+'</li>'
+            }
+            ul.prepend(li)
+
+            $('.container').html(ul)
+    }
+
+    $(()=>{
+        build()
+    })
+
+    const filterArr =(a)=>{
+        fruits=fruits.filter((val,idx)=>{
+           return val.includes(a)
+        })
+        build()
+    }
+
+</script>
+</head>
+<body>
+    <div><button onclick="filterArr($('#filterVal').val())">Filter</button> <input type="text" name="" id="filterVal"></div>
+    <div class="container"></div>
+    
+</body>
+</html>

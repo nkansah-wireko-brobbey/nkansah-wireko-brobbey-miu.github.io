@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input[name="text"]{
+            background-color: blue;
+            border: 1px solid red;
+            margin: 200px;
+        } */
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         let objectArray = [{ Name: 'Ram', Age: 30, Skills: ['java', 'javascript'] },
+        { Name: 'Shyam', Age: 20, Skills: ['python', 'c'] }]
+
+
+        const myFunc = ()=>{
+            let tag = $('#tag').val();
+            let radioBtn = $('input[name="text"]:checked').val()
+            // $('input[name="text-radio"]:checked').val();
+            console.log(radioBtn)
+            let color = $('#color').val();
+
+            let newEl;
+            if(tag == "div"){
+                newEl = $('<div></div>')
+                newEl.html(radioBtn)
+                newEl.css('color',color)
+            }else{
+                newEl = $('<label></label>')
+                newEl.html(radioBtn)
+                newEl.css('color',color)
+            }
+            $('#page').append(newEl);
+            alert(radioBtn)
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <div id="page">
+        <label for="">Select Tag: </label>
+        <select name="tag" id="tag">
+            <option value="label">label</option>
+            <option value="div">div</option>
+        </select>
+        <div>
+            <label for="">Select Text:</label>
+            <label for="">Welcome</label><input type="radio" name="text" value="Welcome" checked>
+            <label for="">DIFFF</label><input type="radio" name="text" value="DIFFF">
+        </div>
+        <div>
+            <label for="">Select Color: </label>
+            <select name="color" id="color">
+                <option value="blue">blue</option>
+                <option value="orange">orange</option>
+            </select>
+        </div>
+        <button onclick="myFunc();">myButton</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+       body *{
+            margin-top:20px;
+        }
+        .default{
+            font-size: 20px;
+            font-weight: 900;
+        }
+        .smaller{
+            font-size: 10px;
+            font-weight: 100;
+        }
+    </style>
+
+    <script>
+        $(()=>{
+
+        })
+
+        let list = new Set()
+
+        const submit =()=>{
+            let input =''
+             input = $('#userText').val();
+
+            if(input.includes('-')){
+                let li =''
+                let value_aft_hyphen = input.split('-')[1]
+                list.add(value_aft_hyphen)
+                list.forEach((value)=>{
+                    li+= '<li>'+value+'</li>'
+                })
+                $('#list').html($(li))
+            }else{
+                $('#content').css('color',input)
+console.log(input.toLowerCase())
+                if(input.toLowerCase() == 'smaller'){
+                    
+                 $('#content').removeClass('default')
+                 $('#content').addClass('smaller')
+
+
+                }
+
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <label for="">Input</label>
+        <input type="text" name="userText" id="userText">
+
+    </div>
+    <div>
+        <span id="content" class="default">Color Me</span>
+    </div>
+
+    <div>
+        <button onclick="submit()">submit</button>
+    </div>
+    <ul id="list">
+
+    </ul>
+    
+</body>
+</html>

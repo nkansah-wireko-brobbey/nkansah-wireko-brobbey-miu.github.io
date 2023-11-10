@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    function calculate(){
+        let first = parseInt($('#first').val())
+        let second = parseInt($('#second').val())
+        $('#third').val(first+second)
+    }
+    function swap(){
+        let first = $('#first').val()
+        let second = $('#second').val()
+        $('#first').val(second)
+        $('#second').val(first)
+        1
+    }
+</script>
+</head>
+<body>
+
+    <div>
+        <input type="text" name="first" id="first">
+        <label for="">+</label>
+        <input type="text" name="second" id="second">
+        <label for="">=</label>
+        <input type="text" name="third" id="third">
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="swap()">Swap</button>
+    </div>
+    
+</body>
+</html>
