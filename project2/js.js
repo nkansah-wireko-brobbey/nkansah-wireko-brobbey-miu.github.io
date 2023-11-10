@@ -1,5 +1,17 @@
 
 $(()=>{
+
+    let audio = $("#backgroundAudio")[0];
+    let collisionaudio = $("#collisionaudio")[0];
+    let jumpaudio = $("#jumpaudio")[0];
+
+    // Play the audio when the page is loaded
+    audio.play();
+
+    audio.addEventListener('error', function(e) {
+        console.log('Error during audio playback:', e);
+      });
+
     let lives = 3;
     let score =0
     let welcomeText =["Welcome","To","The DODGER GAMES"]
@@ -49,15 +61,18 @@ $(()=>{
         character.removeClass('animate')
         },500)
         console.log('Mouse click')
+        jumpaudio.play()
     })
     $(document).keydown((e)=>{
         if(e.which === 32 ||e.which === 38){
             character.addClass('animate')
         setTimeout(()=>{
         character.removeClass('animate')
-        },2000)
+        },1500)
         console.log('Keydown')
+        jumpaudio.play()
         }
+
     })
 
     let stateCheck = setInterval(()=>{
@@ -77,6 +92,7 @@ $(()=>{
                     changeImg('#blockImg',blockImg[randomValue])
                     activeBlock= randomValue
                 }else if(--lives <= 0){
+                    collisionaudio.play()
                     $('#score').html("Game Over")
                     $('#block').removeClass('blockMove')
                     // $('#block').removeClass('blockMove')
@@ -90,7 +106,9 @@ $(()=>{
                     setTimeout(()=>{
                         location.reload();
                     },50000)
+                    clearInterval(stateCheck)
                 } else{
+                    collisionaudio.play()
                     let blockEl = $('#block')
                     let blockClone = blockEl.clone()
                     blockEl.replaceWith(blockClone)
@@ -128,9 +146,15 @@ $(()=>{
 
             blockEl.css('display','none')
             characterEl.css('display','none')
+
+            clearInterval(stateCheck)
+            // break;
         }
 
-        $('#time1').html("Time: "+Math.floor(score))
+        if(Math.floor(score) < 50){
+
+            $('#time1').html("Time: "+Math.floor(score))
+        }
 
     },10)
 
